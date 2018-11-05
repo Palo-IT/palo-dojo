@@ -1,2 +1,3 @@
-# palo-dojo
-Dojo sessions repository
+# Palo IT Dojo sessions
+
+
