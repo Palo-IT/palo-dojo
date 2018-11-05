@@ -2,21 +2,19 @@ package com.paloit.kata;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.paloit.kata.model.Facture;
-import com.paloit.kata.model.Produit;
-import com.paloit.kata.model.TypeProduitEnum;
+import com.paloit.kata.model.*;
 import com.paloit.kata.services.FactureService;
 
 public class TaxesApp {
 
-	private static final Produit LIVRE= new Produit("LIVRE","livre", TypeProduitEnum.BOOK, false, 12.49F);
-	private static final Produit CD_MUSICAL= new Produit("CDM","CD musical", TypeProduitEnum.OTHERS, false, 14.99F);
-	private static final Produit BARRE_CHOCOLAT= new Produit("BCH","barres de chocolat", TypeProduitEnum.FOOD, false, 0.85F);
-	private static final Produit BOITE_CHOCO_IMP= new Produit("BCHI","bo�tes de chocolats import�s", TypeProduitEnum.FOOD, true, 10F);
-	private static final Produit FLACON_PARFUM_IMP= new Produit("FPI","flacons de parfum import�", TypeProduitEnum.OTHERS, true, 47.99F);
-	private static final Produit FLACON_PARFUM= new Produit("FP","flacon de parfum", TypeProduitEnum.OTHERS, false,18.99F);
-	private static final Produit BOITE_PILLULE_MIG= new Produit("BPM","bo�tes de pilules contre la migraine", TypeProduitEnum.MEDICAL, false, 9.75F);
-	private static final Produit BOITE_CHOCO_IMP_BIS= new Produit("BCHI2","bo�tes de chocolats import�s", TypeProduitEnum.FOOD, true, 11.25F);
+	private static final Produit LIVRE= new Book("LIVRE","livre",  false, 12.49F);
+	private static final Produit CD_MUSICAL= new Others("CDM","CD musical", false, 14.99F);
+	private static final Produit BARRE_CHOCOLAT= new Food("BCH","barres de chocolat",  false, 0.85F);
+	private static final Produit BOITE_CHOCO_IMP= new Food("BCHI","bo�tes de chocolats import�s",  true, 10F);
+	private static final Produit FLACON_PARFUM_IMP= new Others("FPI","flacons de parfum import�", true, 47.99F);
+	private static final Produit FLACON_PARFUM= new Others("FP","flacon de parfum", false,18.99F);
+	private static final Produit BOITE_PILLULE_MIG= new Medical("BPM","bo�tes de pilules contre la migraine", false, 9.75F);
+	private static final Produit BOITE_CHOCO_IMP_BIS= new Food("BCHI2","bo�tes de chocolats import�s",  true, 11.25F);
 
 	public static void main(String[] args) {
 		

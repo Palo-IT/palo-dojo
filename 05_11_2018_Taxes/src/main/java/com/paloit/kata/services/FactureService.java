@@ -34,38 +34,14 @@ public class FactureService {
 		return facture;
 	}
 
-	public int getTaxe(Produit produit) {
-		int taxe = 0;
-		switch (produit.getTypeProduit()) {
-		case BOOK:
-			taxe = 10;
-			break;
 
-		case MEDICAL:
-			taxe = 0;
-			break;
-		case FOOD:
-			taxe = 0;
-			break;
-		case OTHERS:
-			taxe = 20;
-			break;
-		default:
-			throw new UnsupportedOperationException("Type de produit est inconnu");
-		}
-
-		if (produit.isImporte()) {
-			taxe += 5;
-		}
-		return taxe;
-	}
 
 	public void calculerFacture(Facture facture) {
 		facture.getLigneFactures().stream().forEach(ligneFacture -> {
 
 			float prixHT = ligneFacture.getQuantite() * ligneFacture.getProduit().getPrixUT();
 			float montantTaxe = new BigDecimal(
-					getTaxe(ligneFacture.getProduit()) * prixHT / 100)
+					ligneFacture.getProduit().getTaxe() * prixHT / 100)
 							.round(new MathContext(3, RoundingMode.HALF_UP)).floatValue();
 			float prixTTC = prixHT + montantTaxe;
 			ligneFacture.setPrixHT(prixHT);
