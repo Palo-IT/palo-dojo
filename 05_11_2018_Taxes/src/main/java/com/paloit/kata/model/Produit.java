@@ -4,14 +4,12 @@ public abstract class Produit implements Taxable {
 
 	private String codeProduit;
 	private String libelle;
-	private Boolean importe;
 	private Float prixUT;
 
 	
-	public Produit(String codeProduit,String libelle, boolean importe, float prixUT) {
+	public Produit(String codeProduit,String libelle, float prixUT) {
 		this.codeProduit=codeProduit;
 		this.libelle = libelle;
-		this.importe = importe;
 		this.prixUT = prixUT;
 	}
 	
@@ -29,14 +27,6 @@ public abstract class Produit implements Taxable {
 
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
-	}
-
-	public Boolean isImporte() {
-		return importe;
-	}
-
-	public void setImporte(boolean importe) {
-		this.importe = importe;
 	}
 
 	public Float getPrixUT() {

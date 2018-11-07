@@ -7,14 +7,16 @@ import com.paloit.kata.services.FactureService;
 
 public class TaxesApp {
 
-	private static final Produit LIVRE= new Book("LIVRE","livre",  false, 12.49F);
-	private static final Produit CD_MUSICAL= new Others("CDM","CD musical", false, 14.99F);
-	private static final Produit BARRE_CHOCOLAT= new Food("BCH","barres de chocolat",  false, 0.85F);
-	private static final Produit BOITE_CHOCO_IMP= new Food("BCHI","bo�tes de chocolats import�s",  true, 10F);
-	private static final Produit FLACON_PARFUM_IMP= new Others("FPI","flacons de parfum import�", true, 47.99F);
-	private static final Produit FLACON_PARFUM= new Others("FP","flacon de parfum", false,18.99F);
-	private static final Produit BOITE_PILLULE_MIG= new Medical("BPM","bo�tes de pilules contre la migraine", false, 9.75F);
-	private static final Produit BOITE_CHOCO_IMP_BIS= new Food("BCHI2","bo�tes de chocolats import�s",  true, 11.25F);
+	private static final Produit LIVRE = new Imported(
+	        new Book("LIVRE", "livre", 12.49F)
+    );
+	private static final Produit CD_MUSICAL= new Others("CDM","CD musical", 14.99F);
+	private static final Produit BARRE_CHOCOLAT= new Food("BCH","barres de chocolat", 0.85F);
+	private static final Produit BOITE_CHOCO_IMP= new Food("BCHI","bo�tes de chocolats import�s", 10F);
+	private static final Produit FLACON_PARFUM_IMP= new Others("FPI","flacons de parfum import�", 47.99F);
+	private static final Produit FLACON_PARFUM= new Others("FP","flacon de parfum",18.99F);
+	private static final Produit BOITE_PILLULE_MIG= new Medical("BPM","bo�tes de pilules contre la migraine",  9.75F);
+	private static final Produit BOITE_CHOCO_IMP_BIS= new Food("BCHI2","bo�tes de chocolats import�s", 11.25F);
 
 	public static void main(String[] args) {
 		
