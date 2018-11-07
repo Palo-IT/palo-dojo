@@ -86,3 +86,32 @@ Total : 199.15€
 
 Montant des taxes : 18.98
 Total : 145,7
+
+---------------------------------------------------------------
+
+# CR session 05/11/2018
+
+## Participants:
+
+- Brice LEPORINI
+- Adrien LOUSTAUNAU
+- Odrick NGUAMA
+- Nader HAJLAOUI
+
+## Bilan
+
+Le groupe a constaté que le block `switch... case` sur le type énumératif devrait être avantageusement remplacé par une interface et un ensemble d'implantations.
+
+Le cas des produits d'importation a d'abord été géré par un flag, puis le groupe a proposé une option à base de décorateur.
+
+Le sujet reste un terrain fertile pour d'autres katas.
+
+## Evaluation de la séance et points à améliorer
+
+Notes (sur 5): 5, 5, 4, 3
+
+Globalement le groupe est satisfait de la séance. Toutefois il aurait été plus avantageux que le sujet soit livré avec les tests de l'énoncé, l'intention initiale était de mettre en évidence la lacune au niveau des tests.
+
+Le partage du code entre les participants a un peu patiné, ce qui est à prévoir à l'avenir est une séquence `fork --> branch --> push --> pull request --> merge`.  
+
+Le sujet n'était pas fonctionnel 😜 au début (NPE, résultats non conformes). 
