@@ -29,28 +29,15 @@ public class FactureService {
 		Facture facture = new Facture();
 		panier.entrySet().forEach(entry -> {
 			LigneFacture ligneFacture = new LigneFacture(entry.getKey(), entry.getValue());
-			facture.getLigneFactures().add(ligneFacture);
+			facture  = facture.addLigneFacture(ligneFacture);
 		});
+		
 		return facture;
 	}
 
 
 
 	public void calculerFacture(Facture facture) {
-		facture.getLigneFactures().stream().forEach(ligneFacture -> {
-
-			float prixHT = ligneFacture.getQuantite() * ligneFacture.getProduit().getPrixUT();
-			float montantTaxe = new BigDecimal(
-					ligneFacture.getProduit().getTaxe() * prixHT / 100)
-							.round(new MathContext(3, RoundingMode.HALF_UP)).floatValue();
-			float prixTTC = prixHT + montantTaxe;
-			ligneFacture.setPrixHT(prixHT);
-			ligneFacture.setPrixTTC(prixTTC);
-
-			facture.setMontantTaxe(facture.getMontantTaxe() + montantTaxe);
-			facture.setPttc(facture.getPttc() + prixTTC);
-
-		});
 
 	}
 
