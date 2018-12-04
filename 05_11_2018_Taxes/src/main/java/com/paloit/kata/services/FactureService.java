@@ -1,15 +1,13 @@
 package com.paloit.kata.services;
 
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
-import java.text.NumberFormat;
-import java.util.Locale;
-import java.util.Map;
-
 import com.paloit.kata.model.Facture;
 import com.paloit.kata.model.LigneFacture;
 import com.paloit.kata.model.Produit;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class FactureService {
 
@@ -27,11 +25,12 @@ public class FactureService {
 
 	public Facture initFacture(Map<Produit, Integer> panier) {
 		Facture facture = new Facture();
-		panier.entrySet().forEach(entry -> {
+
+		for(Entry<Produit, Integer> entry : panier.entrySet()) {
 			LigneFacture ligneFacture = new LigneFacture(entry.getKey(), entry.getValue());
-			facture  = facture.addLigneFacture(ligneFacture);
-		});
-		
+			facture = facture.addLigneFacture(ligneFacture);
+		}
+
 		return facture;
 	}
 
