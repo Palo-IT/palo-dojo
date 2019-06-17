@@ -1,49 +1,59 @@
 package com.paloit.kata.model;
 
-public abstract class Produit implements Taxable {
+public class Produit {
 
-	private String codeProduit;
-	private String libelle;
-	private Boolean importe;
-	private Float prixUT;
+    private String codeProduit;
+    private String libelle;
+    private Boolean importe;
+    private Float prixUT;
+    private TypeProduitEnum typeProduit;
 
-	
-	public Produit(String codeProduit,String libelle, boolean importe, float prixUT) {
-		this.codeProduit=codeProduit;
-		this.libelle = libelle;
-		this.importe = importe;
-		this.prixUT = prixUT;
-	}
-	
-	public String getCodeProduit() {
-		return codeProduit;
-	}
-	
-	public void setCodeProduit(String codeProduit) {
-		this.codeProduit = codeProduit;
-	}
 
-	public String getLibelle() {
-		return libelle;
-	}
+    public Produit(String codeProduit, String libelle, TypeProduitEnum typeProduit,  boolean importe, float prixUT) {
+        this.codeProduit = codeProduit;
+        this.libelle = libelle;
+        this.importe = importe;
+        this.prixUT = prixUT;
+        this.typeProduit = typeProduit;
+    }
 
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
+    public String getCodeProduit() {
+        return codeProduit;
+    }
 
-	public Boolean isImporte() {
-		return importe;
-	}
+    public void setCodeProduit(String codeProduit) {
+        this.codeProduit = codeProduit;
+    }
 
-	public void setImporte(boolean importe) {
-		this.importe = importe;
-	}
+    public String getLibelle() {
+        return libelle;
+    }
 
-	public Float getPrixUT() {
-		return prixUT;
-	}
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
 
-	public void setPrixUT(float prixUT) {
-		this.prixUT = prixUT;
-	}
+    public Boolean isImporte() {
+        return importe;
+    }
+
+    public void setImporte(boolean importe) {
+        this.importe = importe;
+    }
+
+    public Float getPrixUT() {
+        return prixUT;
+    }
+
+    public void setPrixUT(float prixUT) {
+        this.prixUT = prixUT;
+    }
+
+    public TypeProduitEnum getTypeProduit() {
+        return typeProduit;
+    }
+
+    public void setTypeProduit(TypeProduitEnum typeProduit) {
+        this.typeProduit = typeProduit;
+    }
 }

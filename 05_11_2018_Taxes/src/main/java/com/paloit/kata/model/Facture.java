@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Facture {
 
-	private List<LigneFacture> ligneFactures;
-	private Float pttc;
-	private Float montantTaxe;
+	private List<LigneFacture> ligneFactures = new ArrayList<>();
+	private float pttc;
+	private float montantTaxe;
 
 	public List<LigneFacture> getLigneFactures() {
 		return ligneFactures;
