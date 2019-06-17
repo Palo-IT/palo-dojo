@@ -7,6 +7,7 @@ import com.paloit.kata.model.Produit;
 import com.paloit.kata.model.TypeProduitEnum;
 import com.paloit.kata.services.FactureService;
 
+@SuppressWarnings("ALL")
 public class TaxesApp {
 
 	private static final Produit LIVRE= new Produit("LIVRE","livre", TypeProduitEnum.BOOK, false, 12.49F);

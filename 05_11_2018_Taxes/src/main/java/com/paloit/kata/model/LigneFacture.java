@@ -1,5 +1,6 @@
 package com.paloit.kata.model;
 
+@SuppressWarnings("ALL")
 public class LigneFacture {
 
 	private Produit produit;

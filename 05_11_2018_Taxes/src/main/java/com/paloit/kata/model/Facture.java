@@ -3,6 +3,7 @@ package com.paloit.kata.model;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class Facture {
 
 	private List<LigneFacture> ligneFactures = new ArrayList<>();
